@@ -85,9 +85,7 @@ for(let div1 of divCountries){
 
 
 const removeDiv = () => {
-    for (div of divCountries){
-        if (div)
-    }
+    
 }
 
 
