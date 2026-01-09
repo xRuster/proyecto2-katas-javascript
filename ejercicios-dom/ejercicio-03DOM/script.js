@@ -67,7 +67,7 @@ const removeLastElement = () => {
             div.remove()
             
         }
-        
+        continue
        
     }
     
@@ -75,19 +75,18 @@ const removeLastElement = () => {
 removeBottom.addEventListener('click',removeLastElement)
 
 
-for(let div1 of divCountries){
-    const removeIButton = document.createElement("button")
-    removeIButton.textContent = "Eliminar div"
-    div1.appendChild(removeIButton) 
+
+for (let div1 of divCountries) {
+  const removeIButton = document.createElement("button")
+  removeIButton.className = "delete-button"
+  removeIButton.textContent = "Eliminar div"
+  div1.appendChild(removeIButton)
+
+  removeIButton.addEventListener('click', removeDiv);
+
 }
 
 
-
-
-const removeDiv = () => {
-    
+function removeDiv() {
+  this.parentElement.remove();
 }
-
-
-removeIButton.addEventListener('click',removeDiv)
-    
